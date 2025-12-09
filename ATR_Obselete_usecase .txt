@@ -1,0 +1,145 @@
+ 
+ 
+ How to Identity the Usecase:
+ 
+ Condition-1 
+ 
+ From Short Description.
+ 
+ Keywords.
+ 
+  obsolete , to obsolete  , set up status Obsolete , status Obsolete , status to obsolete , please obsolete , to obsolete
+  
+  Sometimes we cannot find the keywords from 
+  
+  Condition -2 
+  
+  From Long Description
+  
+  obsolete , to obsolete  , set up status Obsolete , status Obsolete , status to obsolete , please obsolete 
+  
+  
+  STEP-2 
+  
+  
+ How to extract the VIM ID from the long description.
+  
+  USECASE - 1
+  
+We can Fetch VIM ID directly from the Beleg ID : 36851632 available in the Lond description.
+
+header_incidentId:
+
+SFDC_PASA-20251208083716176-x
+SFDC_PASA-20251203153423713-x
+SFDC_PASA-20251128133701383-x
+SFDC_PASA-20251117104933097-x
+SFDC_PASA-20251017093019096-x
+SFDC_PASA-20251014111759912-x
+SFDC_PASA-20250808125339304-x
+
+e.g: 1
+
+Please could you please check why the document has not been posted and now the document is in status Obsolete
+
+--- PASA Extra Info ---
+
+Beleg ID : 39117624
+Business Priority : 4
+Category 1 : PTP Accounting International
+Category 2 : VIM International Topics
+Category 3 : RE-FX
+Category 4 : ONE.FINANCE
+FirstName : Júlia
+LastName : Gajdošová
+Email : julia.gajdosova@telekom.com
+Phone : 00421903721738
+CID : 7458828  
+  
+
+
+USECASE --- 2
+
+header_incidentId:
+
+SFDC_PASA-20251027144129185-x
+  
+For few usecase we need fetch multiple VIM IDS
+  
+  Beleg ID : 39414555,39243568,38475277,38385329,38385295
+  
+e.g. 1
+
+doc ID 38475377,38475277,38385329,38385295 please obsolete in workflow CID 57561213 because we posted again doc ID 38728843,38729172,38729631,38729593
+ 
+--- PASA Extra Info ---
+ 
+Beleg ID : 38475377,38475277,38385329,38385295
+Business Priority : 4
+Category 1 : PTP Accounting International
+Category 2 : VIM International Topics
+Category 3 : FI
+Category 4 : ONE.FINANCE
+PG-Number : 001391
+FirstName : Lidia Maria
+LastName : Jánošík
+Email : lidia.janosik@telekom.com
+Phone : 00421910939315
+CID : 11346071
+  
+    
+  
+ USECASE --- 3 
+ 
+  VIM ID document ID cannot be fetched form the document Beleg ID
+ 
+ header_incidentId:
+ TIT_SN_INM-20251126140135938-x
+ TIT_SN_INM-20251205141740454-x
+ TIT_SN_INM-20251126141055177-x
+ 
+
+ 
+ e.g: 1
+ 
+To change status from Awaiting Approval – DP to obsolete. Doc id- 39759802, 39117624
+
+e.g: 2
+
+We need to change status from posted to obsolete for workflow doc id - 39681500
+
+e.g:3
+
+We need to change invoice status from indexed to obsolete for workflow document id -39452892
+
+
+Regex experssion keywords:
+
+Doc id- 39759802
+doc id - 39681500
+document id -39452892
+document id - 39452892,38729631 
+ID 39565765
+ID 39565765,39759802
+doc ID 38728843,38729172,38729631,38729593
+document id 38728843,38729172,38729631,38729593 
+Check for continous 8 digit number
+
+
+Trigger of workflow.
+
+option --1 
+
+trigger every time we receive a ticket with Obsolete usecase.
+
+Option-- 2
+
+Assigne cronjob per each day.   
+
+
+  
+  
+  
+  
+  
+  
